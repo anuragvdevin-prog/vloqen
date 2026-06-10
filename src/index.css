@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Light Mode */
+  --bg: #fafafa;
+  --card: #ffffff;
+  --text: #111827;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #10b981;
+}
+
+.dark {
+  /* Dark Green Theme */
+  --bg: #071a17;
+  --card: #10221d;
+  --text: #ecfdf5;
+  --text-muted: #a7c4bb;
+  --border: #1f3a33;
+  --accent: #10b981;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,9 +29,14 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #0b1020;
-  color: white;
   overflow-x: hidden;
+
+  background-color: var(--bg);
+  color: var(--text);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 * {
@@ -18,4 +45,18 @@ body {
 
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
 }

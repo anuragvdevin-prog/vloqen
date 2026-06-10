@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import {
   Code2,
   Smartphone,
   Palette,
-  MonitorSmartphone,
+  MonitorCog,
   Video,
   Clapperboard,
   Sparkles,
@@ -12,97 +13,193 @@ import {
 const services = [
   {
     title: "Web Development",
+    description:
+      "Modern, scalable websites and web applications.",
     icon: Code2,
-    description: "Modern, scalable websites and web applications.",
   },
   {
     title: "Mobile Development",
+    description:
+      "Cross-platform mobile apps with seamless UX.",
     icon: Smartphone,
-    description: "Cross-platform mobile apps with seamless UX.",
   },
   {
     title: "UI/UX Design",
+    description:
+      "User-centered interfaces that drive engagement.",
     icon: Palette,
-    description: "User-centered interfaces that drive engagement.",
   },
   {
     title: "Custom Software",
-    icon: MonitorSmartphone,
-    description: "Tailored software solutions for business growth.",
+    description:
+      "Tailored software solutions for business growth.",
+    icon: MonitorCog,
   },
   {
     title: "Video Editing",
+    description:
+      "Professional editing for brands and creators.",
     icon: Video,
-    description: "Professional editing for brands and creators.",
   },
   {
     title: "Motion Graphics",
+    description:
+      "Eye-catching animated visual content.",
     icon: Clapperboard,
-    description: "Eye-catching animated visual content.",
   },
   {
     title: "VFX",
+    description:
+      "High-quality visual effects and compositing.",
     icon: Sparkles,
-    description: "High-quality visual effects and compositing.",
   },
   {
     title: "Music Production",
+    description:
+      "Original music, mixing, mastering, and sound design.",
     icon: Music,
-    description: "Original music, mixing, mastering, and sound design.",
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24">
+    <section
+      id="services"
+      className="
+        py-24
+        bg-slate-50
+        dark:bg-slate-950
+        transition-colors
+        duration-300
+      "
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <p className="text-violet-400 font-medium">
-            OUR SERVICES
-          </p>
-
-          <h2 className="mt-3 text-3xl md:text-5xl font-bold">
+        
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2
+            className="
+              text-4xl
+              md:text-5xl
+              font-bold
+              text-slate-900
+              dark:text-white
+            "
+          >
             Technology Meets Creativity
           </h2>
 
-          <p className="mt-5 max-w-2xl mx-auto text-slate-400">
+          <p
+            className="
+              mt-4
+              max-w-2xl
+              mx-auto
+              text-lg
+              text-slate-600
+              dark:text-slate-400
+            "
+          >
             We combine software development with creative
             production to help businesses grow faster and
             stand out in competitive markets.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => {
+        {/* Services Grid */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-6
+          "
+        >
+          {services.map((service, index) => {
             const Icon = service.icon;
 
             return (
-              <div
+              <motion.div
                 key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.05,
+                }}
+                whileHover={{
+                  y: -8,
+                }}
                 className="
                   group
-                  rounded-2xl
+                  p-8
+                  rounded-3xl
+                  bg-white
+                  dark:bg-slate-900
                   border
-                  border-slate-800
-                  bg-slate-900/50
-                  p-6
+                  border-slate-200
+                  dark:border-slate-800
                   hover:border-violet-500
                   transition-all
                   duration-300
+                  shadow-sm
+                  hover:shadow-xl
                 "
               >
-                <div className="w-12 h-12 rounded-xl bg-violet-600/20 flex items-center justify-center">
-                  <Icon size={24} />
+                {/* Icon */}
+                <div
+                  className="
+                    w-14
+                    h-14
+                    rounded-2xl
+                    bg-violet-100
+                    dark:bg-violet-500/20
+                    flex
+                    items-center
+                    justify-center
+                    mb-6
+                  "
+                >
+                  <Icon
+                    size={28}
+                    className="
+                      text-violet-600
+                      dark:text-violet-400
+                    "
+                  />
                 </div>
 
-                <h3 className="mt-5 text-xl font-semibold">
+                {/* Title */}
+                <h3
+                  className="
+                    text-2xl
+                    font-semibold
+                    text-slate-900
+                    dark:text-white
+                    mb-3
+                  "
+                >
                   {service.title}
                 </h3>
 
-                <p className="mt-3 text-slate-400">
+                {/* Description */}
+                <p
+                  className="
+                    text-slate-600
+                    dark:text-slate-400
+                    leading-relaxed
+                  "
+                >
                   {service.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

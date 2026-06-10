@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTheme } from "../hooks/useTheme";
 import {
   Menu,
   X,
@@ -6,7 +7,7 @@ import {
   Moon,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "../hooks/useTheme";
+
 
 const navLinks = [
   { name: "Home", href: "#" },
