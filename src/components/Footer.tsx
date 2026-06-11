@@ -42,12 +42,7 @@ const Footer = () => {
                   <li key={item}>
                     <a
                       href="#"
-                      className="
-                        text-slate-600
-                        dark:text-[#A7C4BB]
-                        hover:text-emerald-500
-                        transition
-                      "
+                      className="text-slate-600 transition hover:text-rose-600 dark:text-slate-400 dark:hover:text-rose-400"
                     >
                       {item}
                     </a>
@@ -75,12 +70,7 @@ const Footer = () => {
                 <li key={service}>
                   <a
                     href="#"
-                    className="
-                      text-slate-600
-                      dark:text-[#A7C4BB]
-                      hover:text-emerald-500
-                      transition
-                    "
+                    className="text-slate-600 transition hover:text-rose-600 dark:text-slate-400 dark:hover:text-rose-400"
                   >
                     {service}
                   </a>
@@ -102,45 +92,24 @@ const Footer = () => {
             </div>
 
             {/* Social / Contact Icons */}
-            <div className="flex gap-4 mt-6">
+            <div className="mt-6 flex gap-4">
               <a
                 href="mailto:contact@vloqen.com"
-                className="
-                  p-3
-                  rounded-xl
-                  bg-slate-100
-                  dark:bg-[#1F3A33]
-                  hover:scale-110
-                  transition
-                "
+                className="rounded-xl bg-slate-100 p-3 transition hover:scale-110 hover:bg-rose-100 dark:bg-slate-800 dark:hover:bg-rose-900/50"
               >
                 <Mail size={18} />
               </a>
 
               <a
                 href="tel:+919876543210"
-                className="
-                  p-3
-                  rounded-xl
-                  bg-slate-100
-                  dark:bg-[#1F3A33]
-                  hover:scale-110
-                  transition
-                "
+                className="rounded-xl bg-slate-100 p-3 transition hover:scale-110 hover:bg-rose-100 dark:bg-slate-800 dark:hover:bg-rose-900/50"
               >
                 <Phone size={18} />
               </a>
 
               <a
                 href="#"
-                className="
-                  p-3
-                  rounded-xl
-                  bg-slate-100
-                  dark:bg-[#1F3A33]
-                  hover:scale-110
-                  transition
-                "
+                className="rounded-xl bg-slate-100 p-3 transition hover:scale-110 hover:bg-rose-100 dark:bg-slate-800 dark:hover:bg-rose-900/50"
               >
                 <Globe size={18} />
               </a>
@@ -175,7 +144,7 @@ const Footer = () => {
                 text-sm
                 text-slate-500
                 dark:text-[#A7C4BB]
-                hover:text-emerald-500
+                hover:text-teal-500
               "
             >
               Privacy Policy
@@ -187,7 +156,7 @@ const Footer = () => {
                 text-sm
                 text-slate-500
                 dark:text-[#A7C4BB]
-                hover:text-emerald-500
+                hover:text-teal-500
               "
             >
               Terms of Service

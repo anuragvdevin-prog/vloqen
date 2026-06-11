@@ -3,23 +3,25 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Light Mode */
-  --bg: #fafafa;
+  --bg: #f7f8ff;
   --card: #ffffff;
-  --text: #111827;
-  --text-muted: #6b7280;
-  --border: #e5e7eb;
-  --accent: #10b981;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --border: #e2e8f0;
+  --accent: #7c3aed;
+  --accent-2: #14b8a6;
+  --surface: #eef2ff;
 }
 
 .dark {
-  /* Dark Green Theme */
-  --bg: #071a17;
-  --card: #10221d;
-  --text: #ecfdf5;
-  --text-muted: #a7c4bb;
-  --border: #1f3a33;
-  --accent: #10b981;
+  --bg: #030712;
+  --card: #0f172a;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: #1e293b;
+  --accent: #8b5cf6;
+  --accent-2: #2dd4bf;
+  --surface: #111827;
 }
 
 html {
@@ -30,13 +32,9 @@ body {
   margin: 0;
   min-width: 320px;
   overflow-x: hidden;
-
   background-color: var(--bg);
   color: var(--text);
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -57,6 +55,6 @@ img {
 }
 
 ::selection {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: white;
 }

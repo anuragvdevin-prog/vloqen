@@ -13,6 +13,7 @@ const navLinks = [
   { name: "Home", href: "#" },
   { name: "Services", href: "#services" },
   { name: "Portfolio", href: "#portfolio" },
+  { name: "Careers", href: "#careers" },
   { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];
@@ -46,14 +47,11 @@ const Navbar = () => {
           {/* Logo */}
           <a
             href="#"
-            className="
-              text-3xl
-              font-bold
-              text-slate-900
-              dark:text-white
-            "
+            className="text-3xl font-bold text-slate-900 dark:text-white"
           >
-            Vloqen
+            <span className="bg-gradient-to-r from-rose-600 to-teal-500 bg-clip-text text-transparent">
+              Vloqen
+            </span>
           </a>
 
           {/* Desktop Navigation */}
@@ -65,8 +63,8 @@ const Navbar = () => {
                 className="
                   text-slate-600
                   dark:text-slate-300
-                  hover:text-violet-600
-                  dark:hover:text-violet-400
+                  hover:text-rose-600
+                  dark:hover:text-rose-400
                   transition
                 "
               >
@@ -87,7 +85,7 @@ const Navbar = () => {
                 border
                 border-slate-300
                 dark:border-slate-700
-                hover:border-violet-500
+                hover:border-rose-500
                 transition
               "
             >
@@ -99,17 +97,7 @@ const Navbar = () => {
             </button>
 
             {/* Login */}
-            <button
-              className="
-                px-5
-                py-2
-                rounded-lg
-                bg-violet-600
-                text-white
-                hover:bg-violet-700
-                transition
-              "
-            >
+            <button className="rounded-lg bg-gradient-to-r from-rose-600 to-teal-500 px-5 py-2 text-white transition hover:opacity-90">
               Login
             </button>
           </div>
@@ -195,7 +183,7 @@ const Navbar = () => {
                   px-5
                   py-3
                   rounded-lg
-                  bg-violet-600
+                  bg-rose-600
                   text-white
                 "
               >
